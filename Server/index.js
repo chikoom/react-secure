@@ -4,11 +4,11 @@ import cors from 'cors';
 import jwks from 'jwks-rsa';
 import bodyParser from 'body-parser';
 
-const PORT = 4000;
+const PORT = 4040;
 
 const app = express();
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ exteneded: true }));
+app.use(express.urlencoded({ extended: true }))
 app.use(cors());
 
 app.get('/courses', (req, res) => {
